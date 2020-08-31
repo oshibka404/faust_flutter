@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dsp_api.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,15 +14,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Faust Flutter Demo'),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -30,10 +29,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   bool _gate = false;
 
+  @override
+  void initState() {
+    DspApi.start();
+    super.initState();
+  }
+
   void _toggleBeep() {
     setState(() {
       _gate = !_gate;
     });
+
+    DspApi.setParamValue(0, _gate ? 1 : 0);
   }
 
   @override

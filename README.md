@@ -8,10 +8,10 @@ Minimal audio application with Flutter UI and Faust DSP.
 ## Build instructions
 Build DSP layer:
 ```sh
-faust2api -ios -nozip -target ./ios/Runner/DSP ./DSP/main.dsp
+$ faust2api -ios -nozip -target ./ios/Runner/DSP ./DSP/main.dsp
 ```
 
 Start UI:
 ```sh
-flutter run
+$ flutter run
 ```
