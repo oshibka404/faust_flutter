@@ -47,10 +47,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: _toggleBeep,
           child: Text(_gate ? 'Stop' : 'Beep'),
-          color: _gate ? Colors.red : Colors.amber,
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(
+                  _gate ? Colors.red : Colors.amber)),
         ),
       ),
     );
