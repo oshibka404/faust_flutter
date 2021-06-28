@@ -11,7 +11,7 @@ class DspApi {
     }
   }
 
-  static Future<int> deleteVoice(int voice) {
+  static Future<int?> deleteVoice(int voice) {
     try {
       return _platform.invokeMethod('deleteVoice', <String, int>{
         'voice': voice,
@@ -21,7 +21,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getCpuLoad() {
+  static Future<double?> getCpuLoad() {
     try {
       return _platform.invokeMethod('getCPULoad') as Future<double>;
     } on PlatformException catch (e) {
@@ -29,7 +29,7 @@ class DspApi {
     }
   }
 
-  static Future<String> getJsonMeta() {
+  static Future<String?> getJsonMeta() {
     try {
       return _platform.invokeMethod('getJSONUI') as Future<String>;
     } on PlatformException catch (e) {
@@ -37,7 +37,7 @@ class DspApi {
     }
   }
 
-  static Future<String> getJsonUi() {
+  static Future<String?> getJsonUi() {
     try {
       return _platform.invokeMethod('getJSONUI') as Future<String>;
     } on PlatformException catch (e) {
@@ -45,7 +45,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getParamInit(int id) {
+  static Future<double?> getParamInit(int id) {
     try {
       return _platform.invokeMethod('getParamInit', <String, int>{
         'id': id,
@@ -55,7 +55,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getParamInitByPath(String path) {
+  static Future<double?> getParamInitByPath(String path) {
     try {
       return _platform.invokeMethod('getParamInitByPath', <String, String>{
         'path': path,
@@ -65,7 +65,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getParamMax(int id) {
+  static Future<double?> getParamMax(int id) {
     try {
       return _platform.invokeMethod('getParamMax', <String, int>{
         'id': id,
@@ -75,7 +75,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getParamMaxByPath(String path) {
+  static Future<double?> getParamMaxByPath(String path) {
     try {
       return _platform.invokeMethod('getParamMaxByPath', <String, String>{
         'path': path,
@@ -85,7 +85,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getParamMin(int id) {
+  static Future<double?> getParamMin(int id) {
     try {
       return _platform.invokeMethod('getParamMin', <String, int>{
         'id': id,
@@ -95,7 +95,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getParamMinByPath(String path) {
+  static Future<double?> getParamMinByPath(String path) {
     try {
       return _platform.invokeMethod('getParamMinByPath', <String, String>{
         'path': path,
@@ -105,7 +105,7 @@ class DspApi {
     }
   }
 
-  static Future<int> getParamsCount() {
+  static Future<int?> getParamsCount() {
     try {
       return _platform.invokeMethod('getParamsCount') as Future<int>;
     } on PlatformException catch (e) {
@@ -113,7 +113,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getParamValue(int id) {
+  static Future<double?> getParamValue(int id) {
     try {
       return _platform.invokeMethod('getParamValue', <String, int>{
         'id': id,
@@ -123,7 +123,7 @@ class DspApi {
     }
   }
 
-  static Future<double> getParamValueByPath(String path) {
+  static Future<double?> getParamValueByPath(String path) {
     try {
       return _platform.invokeMethod('getParamValueByPath', <String, String>{
         'path': path,
@@ -145,7 +145,7 @@ class DspApi {
     }
   }
 
-  static Future<bool> isRunning() {
+  static Future<bool?> isRunning() {
     try {
       return _platform.invokeMethod('isRunning') as Future<bool>;
     } on PlatformException catch (e) {
@@ -153,7 +153,7 @@ class DspApi {
     }
   }
 
-  static Future<int> keyOff(int pitch) {
+  static Future<int?> keyOff(int pitch) {
     try {
       return _platform.invokeMethod('keyOff', <String, int>{
         'pitch': pitch,
@@ -163,7 +163,7 @@ class DspApi {
     }
   }
 
-  static Future<int> keyOn(int pitch, int velocity) {
+  static Future<int?> keyOn(int pitch, int velocity) {
     try {
       return _platform.invokeMethod('keyOn', <String, int>{
         'pitch': pitch,
@@ -174,7 +174,7 @@ class DspApi {
     }
   }
 
-  static Future<int> newVoice() {
+  static Future<int?> newVoice() {
     try {
       return _platform.invokeMethod('newVoice') as Future<int>;
     } on PlatformException catch (e) {
@@ -218,7 +218,7 @@ class DspApi {
     }
   }
 
-  static Future<bool> start() {
+  static Future<bool?> start() {
     try {
       return _platform.invokeMethod('start') as Future<bool>;
     } on PlatformException catch (e) {
